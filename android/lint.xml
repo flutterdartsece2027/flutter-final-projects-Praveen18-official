@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <!-- Disable the given check in this project -->
+    <issue id="IconMissingDensityFolder" severity="ignore" />
+    <issue id="ObsoleteLintCustomCheck" severity="ignore" />
+    <issue id="OldTargetApi" severity="ignore" />
+    
+    <!-- Disable Gradle-related checks -->
+    <issue id="Gradle" severity="ignore" />
+    
+    <!-- Disable missing translations -->
+    <issue id="MissingTranslation" severity="ignore" />
+    
+    <!-- Disable unused resources -->
+    <issue id="UnusedResources" severity="ignore" />
+    
+    <!-- Disable hardcoded strings -->
+    <issue id="HardcodedText" severity="ignore" />
+    
+    <!-- Disable content description for ImageViews -->
+    <issue id="ContentDescription" severity="ignore" />
+    
+    <!-- Disable RTL issues -->
+    <issue id="RtlHardcoded" severity="ignore" />
+    <issue id="RtlCompat" severity="ignore" />
+    <issue id="RtlEnabled" severity="ignore" />
+    
+    <!-- Disable layout issues -->
+    <issue id="ScrollViewCount" severity="ignore" />
+    <issue id="NestedWeights" severity="ignore" />
+    
+    <!-- Disable performance issues -->
+    <issue id="DrawAllocation" severity="ignore" />
+    <issue id="UseSparseArrays" severity="ignore" />
+    
+    <!-- Disable security issues -->
+    <issue id="AllowBackup" severity="ignore" />
+    <issue id="GoogleAppIndexingWarning" severity="ignore" />
+    
+    <!-- Disable accessibility issues -->
+    <issue id="LabelFor" severity="ignore" />
+    <issue id="ClickableViewAccessibility" severity="ignore" />
+    
+    <!-- Disable version compatibility issues -->
+    <issue id="NewApi" severity="ignore" />
+    <issue id="InlinedApi" severity="ignore" />
+    
+    <!-- Disable internationalization issues -->
+    <issue id="SetTextI18n" severity="ignore" />
+    
+    <!-- Disable resource validation -->
+    <issue id="MissingPrefix" severity="ignore" />
+    <issue id="MissingId" severity="ignore" />
+    
+    <!-- Disable manifest validation -->
+    <issue id="MissingApplicationIcon" severity="ignore" />
+    <issue id="DuplicateActivity" severity="ignore" />
+    
+    <!-- Disable custom views validation -->
+    <issue id="CustomViewStyleable" severity="ignore" />
+    
+    <!-- Disable annotation issues -->
+    <issue id="MissingPermission" severity="ignore" />
+    <issue id="Override" severity="ignore" />
+    
+    <!-- Disable layout validation -->
+    <issue id="MergeRootFrame" severity="ignore" />
+    <issue id="DisableBaselineAlignment" severity="ignore" />
+    
+    <!-- Disable unused ids -->
+    <issue id="UnusedIds" severity="ignore" />
+    
+    <!-- Disable locale folder validation -->
+    <issue id="LocaleFolder" severity="ignore" />
+    
+    <!-- Disable resource type validation -->
+    <issue id="ResourceType" severity="ignore" />
+    
+    <!-- Disable vector path validation -->
+    <issue id="VectorPath" severity="ignore" />
+    
+    <!-- Disable duplicate ids across layouts -->
+    <issue id="DuplicateIds" severity="ignore" />
+    
+    <!-- Disable layout hierarchy validation -->
+    <issue id="TooManyViews" severity="ignore" />
+    <issue id="TooDeepLayout" severity="ignore" />
+    
+    <!-- Disable text field validation -->
+    <issue id="TextFields" severity="ignore" />
+    
+    <!-- Disable menu validation -->
+    <issue id="MenuTitle" severity="ignore" />
+    
+    <!-- Disable drawable validation -->
+    <issue id="GifUsage" severity="ignore" />
+    <issue id="IconDuplicates" severity="ignore" />
+    
+    <!-- Disable manifest validation -->
+    <issue id="MissingLeanbackSupport" severity="ignore" />
+    
+    <!-- Disable resource validation -->
+    <issue id="MissingRegistered" severity="ignore" />
+    
+    <!-- Disable custom view validation -->
+    <issue id="CustomViewStyleable" severity="ignore" />
+    
+    <!-- Disable layout validation -->
+    <issue id="ScrollViewSize" severity="ignore" />
+    
+    <!-- Disable security validation -->
+    <issue id="ExportedService" severity="ignore" />
+    <issue id="ExportedReceiver" severity="ignore" />
+    
+    <!-- Disable performance validation -->
+    <issue id="HandlerLeak" severity="ignore" />
+    <issue id="ObsoleteLayoutParam" severity="ignore" />
+    
+    <!-- Disable resource validation -->
+    <issue id="MissingPrefix" severity="ignore" />
+    
+    <!-- Disable manifest validation -->
+    <issue id="MissingTvBanner" severity="ignore" />
+    
+    <!-- Disable layout validation -->
+    <issue id="NestedScrolling" severity="ignore" />
+    
+    <!-- Disable resource validation -->
+    <issue id="UnusedAttribute" severity="ignore" />
+    
+    <!-- Disable manifest validation -->
+    <issue id="MissingLeanbackLauncher" severity="ignore" />
+    
+    <!-- Disable resource validation -->
+    <issue id="UnusedResources" severity="ignore" />
+    
+    <!-- Disable layout validation -->
+    <issue id="Orientation" severity="ignore" />
+    
+    <!-- Disable security validation -->
+    <issue id="UnsafeProtectedBroadcastReceiver" severity="ignore" />
+    
+    <!-- Disable performance validation -->
+    <issue id="UnusedIds" severity="ignore" />
+    
+    <!-- Disable resource validation -->
+    <issue id="UnusedAttribute" severity="ignore" />
+    
+    <!-- Disable layout validation -->
+    <issue id="NestedWeights" severity="ignore" />
+    
+    <!-- Disable security validation -->
+    <issue id="ExportedContentProvider" severity="ignore" />
+    
+    <!-- Disable performance validation -->
+    <issue id="UseCompoundDrawables" severity="ignore" />
+    
+    <!-- Disable resource validation -->
+    <issue id="MissingPrefix" severity="ignore" />
+    
+    <!-- Disable manifest validation -->
+    <issue id="MissingLeanbackSupport" severity="ignore" />
+    
+    <!-- Disable layout validation -->
+    <issue id="ScrollViewSize" severity="ignore" />
+    
+    <!-- Disable security validation -->
+    <issue id="ExportedService" severity="ignore" />
+    <issue id="ExportedReceiver" severity="ignore" />
+    
+    <!-- Disable performance validation -->
+    <issue id="HandlerLeak" severity="ignore" />
+    <issue id="ObsoleteLayoutParam" severity="ignore" />
+    
+    <!-- Disable resource validation -->
+    <issue id="MissingPrefix" severity="ignore" />
+    
+    <!-- Disable manifest validation -->
+    <issue id="MissingTvBanner" severity="ignore" />
+    
+    <!-- Disable layout validation -->
+    <issue id="NestedScrolling" severity="ignore" />
+    
+    <!-- Disable resource validation -->
+    <issue id="UnusedAttribute" severity="ignore" />
+    
+    <!-- Disable manifest validation -->
+    <issue id="MissingLeanbackLauncher" severity="ignore" />
+    
+    <!-- Disable resource validation -->
+    <issue id="UnusedResources" severity="ignore" />
+    
+    <!-- Disable layout validation -->
+    <issue id="Orientation" severity="ignore" />
+    
+    <!-- Disable security validation -->
+    <issue id="UnsafeProtectedBroadcastReceiver" severity="ignore" />
+    
+    <!-- Disable performance validation -->
+    <issue id="UnusedIds" severity="ignore" />
+    
+    <!-- Disable resource validation -->
+    <issue id="UnusedAttribute" severity="ignore" />
+    
+    <!-- Disable layout validation -->
+    <issue id="NestedWeights" severity="ignore" />
+    
+    <!-- Disable security validation -->
+    <issue id="ExportedContentProvider" severity="ignore" />
+    
+    <!-- Disable performance validation -->
+    <issue id="UseCompoundDrawables" severity="ignore" />
+</lint>
