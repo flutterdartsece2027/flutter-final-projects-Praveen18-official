@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="AgriReach - Agricultural Marketplace">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="AgriReach">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>AgriReach - Agricultural Marketplace</title>
+  <link rel="manifest" href="manifest.json">
+  
+  <!-- Flutter Web -->
+  <script src="https://cdn.jsdelivr.net/npm/canvaskit-wasm@0.39.0/bin/canvaskit.js"></script>
+  <script src="flutter.js" defer></script>
+  
+  <!-- Leaflet CSS & JS for Flutter Map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+   integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tF/miUoWSXyHx8R6c3qQ="
+   crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+   integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+   crossorigin=""></script>
+  
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-storage-compat.js"></script>
+  
+  <script>
+    // Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyDsH2n0WYs9wtQqVK1hcvS9pKnj5REuMHU",
+      authDomain: "intern1881.firebaseapp.com",
+      projectId: "intern1881",
+      storageBucket: "intern1881.appspot.com",
+      messagingSenderId: "958137282843",
+      appId: "1:958137282843:web:4b3c3e3e3e3e3e3e3e3e3e"
+    };
+
+    // Initialize Firebase
+    const app = firebase.initializeApp(firebaseConfig);
+    
+    // Initialize Firestore with persistence enabled
+    const db = firebase.firestore();
+    db.enablePersistence()
+      .catch((err) => {
+        console.error('Firebase persistence error: ', err);
+      });
+      
+    // Make Firebase services available globally for debugging
+    window.firebase = firebase;
+  </script>
+</head>
+<body>
+  <!-- Load Flutter JS -->
+  <script src="https://cdn.jsdelivr.net/npm/canvaskit-wasm@0.39.0/bin/canvaskit.js"></script>
+  
+  <!-- Load web workarounds -->
+  <script defer src="main.dart.js" type="application/javascript"></script>
+  
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-storage-compat.js"></script>
+  
+  <!-- Image Cropper -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css">
+  
+  <!-- Web workarounds -->
+  <script>
+    // Initialize platform view registry
+    if (!window.flutter_web) {
+      window.flutter_web = {};
+    }
+    
+    if (!window.flutter_web.platformViewRegistry) {
+      window.flutter_web.platformViewRegistry = {
+        registerViewFactory: function(viewId, viewFactory, {isVisible = true} = {}) {
+          console.log('Registering view factory for:', viewId);
+          return {
+            dispose: function() {},
+            resize: function() { return Promise.resolve(); },
+            getBoundingClientRect: function() { return null; },
+            setAttribute: function() {}
+          };
+        }
+      };
+    }
+    
+    // Image handling configuration
+  </script>
+  
+  <script>
+    // Check if Flutter loader is available
+    window.addEventListener('load', function(ev) {
+      // Create a loading message
+      const loadingDiv = document.createElement('div');
+      loadingDiv.id = 'loading';
+      loadingDiv.style.position = 'fixed';
+      loadingDiv.style.top = '0';
+      loadingDiv.style.left = '0';
+      loadingDiv.style.width = '100%';
+      loadingDiv.style.height = '100%';
+      loadingDiv.style.display = 'flex';
+      loadingDiv.style.justifyContent = 'center';
+      loadingDiv.style.alignItems = 'center';
+      loadingDiv.style.backgroundColor = '#f5f5f5';
+      loadingDiv.style.zIndex = '9999';
+      loadingDiv.innerHTML = `
+        <div style="text-align: center;">
+          <div style="font-size: 24px; margin-bottom: 20px; color: #2e7d32;">Loading AgriReach...</div>
+          <div style="width: 50px; height: 50px; margin: 0 auto; border: 5px solid #f3f3f3; border-top: 5px solid #2e7d32; border-radius: 50%; animation: spin 1s linear infinite;"></div>
+        </div>
+        <style>
+          @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+          }
+        </style>
+      `;
+      document.body.prepend(loadingDiv);
+
+      // Load the main app
+      const scriptTag = document.createElement('script');
+      scriptTag.src = 'main.dart.js';
+      scriptTag.type = 'application/javascript';
+      scriptTag.onload = function() {
+        // App is loaded, remove loading message
+        setTimeout(() => {
+          if (document.getElementById('loading')) {
+            document.getElementById('loading').style.opacity = '0';
+            setTimeout(() => {
+              if (document.getElementById('loading')) {
+                document.getElementById('loading').remove();
+              }
+            }, 500);
+          }
+        }, 1000);
+      };
+      scriptTag.onerror = function() {
+        console.error('Failed to load main.dart.js');
+        loadingDiv.innerHTML = `
+          <div style="text-align: center; padding: 20px;">
+            <h2 style="color: #c62828;">Failed to load application</h2>
+            <p>Please refresh the page or try again later.</p>
+            <button onclick="window.location.reload()" style="margin-top: 20px; padding: 10px 20px; background: #2e7d32; color: white; border: none; border-radius: 4px; cursor: pointer;">
+              Refresh Page
+            </button>
+          </div>
+        `;
+      };
+      document.body.appendChild(scriptTag);
+    });
+  </script>
+</body>
+</html>
